@@ -10,7 +10,7 @@ require (
 	github.com/Azure/go-autorest/autorest/validation v0.3.1 // indirect
 	github.com/aws/aws-sdk-go v1.42.44 // indirect
 	github.com/container-storage-interface/spec v1.1.0
-	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
+	github.com/golang/glog v1.1.0
 	github.com/jacobsa/fuse v0.0.0-00010101000000-000000000000 // indirect
 	github.com/kahing/goofys v0.24.0
 	github.com/kubernetes-csi/csi-lib-utils v0.6.1 // indirect
@@ -27,9 +27,8 @@ require (
 	github.com/tklauser/go-sysconf v0.3.9 // indirect
 	github.com/urfave/cli v1.22.5 // indirect
 	github.com/yusufpapurcu/wmi v1.2.2 // indirect
-	golang.org/x/net v0.0.0-20211216030914-fe4d6282115f
-	google.golang.org/genproto v0.0.0-20220126215142-9970aeb2e350 // indirect
-	google.golang.org/grpc v1.40.0
+	golang.org/x/net v0.9.0
+	google.golang.org/grpc v1.56.3
 	k8s.io/mount-utils v0.23.3
 	k8s.io/utils v0.0.0-20211116205334-6203023598ed
 )
