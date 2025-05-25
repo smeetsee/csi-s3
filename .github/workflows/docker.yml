@@ -118,6 +118,9 @@ jobs:
     if: ${{ github.event_name != 'pull_request' }}
     needs:
       - docker
+    permissions:
+      contents: read
+      packages: write
     steps:
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
