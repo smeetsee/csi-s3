@@ -10,3 +10,7 @@
 /Godeps/_workspace
 vendor
 vendor.*
+
+# Development directories
+.vscode
+.DS_Store
