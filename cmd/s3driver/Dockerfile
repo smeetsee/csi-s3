@@ -1,4 +1,4 @@
-FROM golang:1.16-alpine as gobuild
+FROM golang:1.16-alpine AS gobuild
 
 WORKDIR /build
 ADD . /build
@@ -17,7 +17,10 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 # install rclone
-RUN ARCH=$(dpkg --print-architecture) curl -o /tmp/rclone.deb -s https://downloads.rclone.org/rclone-current-linux-$ARCH.deb  && dpkg -i /tmp/rclone.deb && rm /tmp/rclone.deb
+RUN ARCH=$(dpkg --print-architecture) && \
+    curl -o /tmp/rclone.deb -s https://downloads.rclone.org/rclone-current-linux-$ARCH.deb && \
+    dpkg -i /tmp/rclone.deb && \
+    rm /tmp/rclone.deb
 
 COPY --from=gobuild /build/s3driver /s3driver
 ENTRYPOINT ["/s3driver"]
