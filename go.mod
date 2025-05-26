@@ -1,6 +1,6 @@
 module github.com/ctrox/csi-s3
 
-go 1.15
+go 1.24
 
 require (
 	github.com/Azure/azure-sdk-for-go v32.1.0+incompatible // indirect
