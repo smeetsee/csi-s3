@@ -7,7 +7,7 @@ RUN apt-get update && \
   git wget make && \
   rm -rf /var/lib/apt/lists/*
 
-ARG GOVERSION=1.16.3
+ARG GOVERSION=1.24.3
 RUN wget -q https://golang.org/dl/go${GOVERSION}.linux-amd64.tar.gz && \
   tar -xf go${GOVERSION}.linux-amd64.tar.gz && \
   rm go${GOVERSION}.linux-amd64.tar.gz && \
